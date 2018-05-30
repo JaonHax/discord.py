@@ -28,7 +28,16 @@ async def roll(dice : str):
     await bot.say(result)
 
 @bot.command
-async def money():
+async def create(discord.user)
+    user.money = 0
+    
+
+@bot.command
+async def admingive(user, amt):
+    user.money += amt
+
+@bot.command
+async def money(user):
     """Shows user's money"""
     
 

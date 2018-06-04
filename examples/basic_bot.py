@@ -1,6 +1,5 @@
-import discord
+import discord, random, time
 from discord.ext import commands
-import random
 
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
@@ -27,21 +26,6 @@ async def roll(dice : str):
     result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
     await bot.say(result)
 
-@bot.command
-async def create(discord.user)
-    user.money = 0
-    
-
-@bot.command
-async def admingive(user, amt):
-    user.money += amt
-
-@bot.command
-async def money(user):
-    """Shows user's money"""
-    
-
-
 @bot.group(pass_context=True)
 async def cool(ctx):
     """Says if a user is cool.
@@ -55,5 +39,21 @@ async def cool(ctx):
 async def _bot():
     """Is the bot cool?"""
     await bot.say('Yes, the bot is cool.')
+                   
+async def autothief():
+    while True:
+        a = 24
+        while a > 0:
+            await bot.say('$steal')
+            time.sleep(3600)
+            a -= 1
+        b = 500
+        while b > 0:
+            await bot.say('$give 100 <@!438443378498338816>')
+            b -= 1
+        b = 99
+        while b > 0:
+            await bot.say('$give 1 <@!438443378498338816>')
+            b -= 1
 
-bot.run('token')
+bot.run('NDUzMjA4ODk2NjEwMjM4NDc0.DfbjVg.6GoDKoWf3Tblnwa5xBphwGexR_M')
